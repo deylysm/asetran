@@ -1,0 +1,386 @@
+html {
+      box-sizing: border-box;
+}
+
+    *,
+    *:before,
+    *:after {
+    box-sizing: inherit;
+ }
+
+ body {
+     font-family: 'Ibarra Real Nova', serif;
+     font-family: 'Raleway', sans-serif;
+     font-family: 'Roboto', sans-serif;
+ }
+
+ /**UTILITARIAS SE VAN USAR MUCHAS VECES ESTAS CLASES**/
+ .container {
+
+           width: 80%;
+           max-width: 1280px; /**el tamaño maximo sera de 1280px**/
+           margin-right: auto;
+           margin-left: auto;
+ }
+
+ .btn {
+     display: inline-block;
+     text-decoration: none;
+     font-size: 1rem;
+     padding: 0.5em;
+     margin: 0 0.1em;
+     border-radius: 0.5em;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #0F2620;
+}
+
+.btn-secondary {
+    color: white;
+    background-color: #7BA69A;
+}
+
+.btn-danger {
+    color: white;
+    background-color:#A6444C;
+}
+
+.btn-light {
+    color: black;
+    background-color: #DDF2CE;
+}
+
+.btn-dark {
+    color: black;
+    background-color: #423931;
+}
+
+
+ /****************************  HEADER *************************/
+ .bg-header {
+
+          /*background-image: url(../assets/imagenes/carretera3.jpg) ; /*LLEVA COMILLAS SIMPLES DE LADO Y LADO*/
+          background-repeat: no-repeat ; /*para que la imagen no se repita en pantallas grandes*/
+          background-position: center;
+          background-size: cover; /*LA IMAGEN SE AJUTA AL TAMAÑO DEL DISPOSITIVO*/
+          height: 8.75em;/*18.75*16= 300PX*/
+          padding: 2.5em 0;
+          background-color: #af333d;
+}
+
+
+
+.navbar {
+
+          display: flex; /*FLE-BOX*/
+          flex-direction: column;
+          align-items: center ;
+         
+       
+}
+
+/************    RESPONSIVE   *****************************/
+@media (min-width: 768px) {/*CUANDO TENGA ESE TAMAÑO HARA LO SIGUIENTE:*/
+            
+    .navbar { 
+
+            flex-direction: row;
+           justify-content: space-between;
+         
+     }
+
+ }
+
+.navbar-brand {
+
+          display: flex; /*OSICIONA LA IMAGEN EN EL CENTRO*/
+          flex-direction: column; /*COLOCA LA IMAGE FORMA vertical*/
+          align-items: center;
+
+          margin-bottom: 0.5em; /*PARA DAR ESPACIO ENTRE EL TITULO Y EL MENU Y SON 32PX PORQUE EQUIVALE A 2REM*/
+}
+
+/************    RESPONSIVE   *****************************/
+@media (min-width: 768px) {/*CUANDO TENGA ESE TAMAÑO HARA LO SIGUIENTE:*/
+            
+     .navbar-brand { 
+
+            flex-direction: row;
+            margin-bottom: 0;
+     }
+
+ }
+
+.navbar-brand img{  /*MODIFICA LA IMAGEN QUE ESTE EN LA CLASE  NAVBAR-BRAND*/
+          width: 14em;
+          border-radius: 0.6em;
+        
+          /*EL COLOR DE LA IMAGEN GAMERS SE MODIFICA EN SU CODIGO EL FILL*/
+}
+
+
+.navbar-nav {
+        
+          background-color:rgba(0, 0, 0, 0.862);
+          padding: 0.8em;
+          border-radius: 0.3em;   
+          
+}
+
+.nav-link {
+         
+           display: inline-block;
+           padding: 0.5em;
+           text-decoration: white;
+           color:white; 
+           font-size: 1.1em;  
+          
+}
+
+/* HOVER SIRVE PARA DARLE EL EFECTO CUANDO EL MAUSE PASA POR ENCIMA DEL MENU*/
+.nav-link:hover {
+
+            background-color: rgba(238, 203, 203, 0.837);
+            color:black;
+            border-radius: 0.2em;
+           
+}
+
+
+/*.hr-linea {
+          display: flex;
+          
+          background-color: rgba(204, 13, 13, 0.924);/*TRANSPARENCIA DE LA BARRA NEGRA*/
+          /*padding: 0.5em 0;*/
+          /*margin-top: 5.9em;*/
+         /* padding: 0.5em;*/
+/*}*/
+
+
+/****************************************  CARRUSEL  ******************************************/
+
+          
+.slider {
+  
+	width: 97%;
+    height: 450px;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 16s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+    display: flex;
+	width: 100%;
+
+}
+
+/** responsive dey yyy***************************************/
+
+@media (min-height: 768px) {/*CUANDO TENGA ESE TAMAÑO HARA LO SIGUIENTE:*/
+            
+     .slider img { 
+            
+            height: 28.25em;
+     }
+
+ }
+
+
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+
+/****************** MAIN ********************************************/
+.main {
+       
+          /*background-color: #33afa5;
+           margin-top: -2em; /*para colocar nuestro productos mas arriba*/
+          /* background-color: white;*/
+          /* padding:0.3em 
+           border-radius: 0.3em;  */
+          
+           width: 85%;
+           max-width: 1600px; /**el tamaño maximo sera de 1280px**/
+          
+           
+         
+}
+
+.main-title {
+          
+          text-align: center; 
+          color: #0e0c0dee; 
+          text-transform: uppercase; /*PARA COLOCAR TEXTO EN MAYUSCULA*/
+}
+
+/******************  RESPONSIVE MAIN ******************/
+@media (min-width: 768px) {/*CUANDO TENGA ESE TAMAÑO HARA LO SIGUIENTE:*/
+         .tienda {
+                
+            display: flex; /* COLOCO LAS TARJETAS UNO AL LADO DEL OTRO*/
+            gap:2em; /*PONE EL ESPACIO ENTRE LAS TARJETAS*/
+            
+        }        
+   
+}
+
+
+/*****************  CARD  *******************************/
+
+.card {
+
+   /* background-color: #A6444C;*/
+    color: black;
+    overflow:hidden;
+    margin-bottom: 1em;
+   
+}
+
+
+.card-img {
+    width: 101%;
+    height: 30%;
+}
+
+.card-body {
+      background-color: #af333d;
+      padding: 1em;
+   
+}
+        
+  
+
+
+.card-body h5 {
+    font-size: 1.5rem;
+    margin: 0.3em 0;
+    font-weight: 500;
+    text-align: center;
+    
+    color: white;
+  
+}
+
+.card-body p {
+    font-weight: 300;
+    text-align: justify;
+
+}
+
+/*************************  HR  espacio entre card y elcamion nosotros*******************************/
+
+.hr {
+     display: flex;
+     padding: 1.3em;
+     background-color:white;
+     width: 100%;
+    
+}
+
+/******************************  nosotros***********/
+.nosotros {
+       
+             display: flex; /*SI TRABAJAS CON FLEXBOX HAY QUE COLOCARLE EL WIDTH 100% A LA IMAGEN SINO NO SE VE*/
+             flex-direction: column;
+             padding: 0.5em;
+             margin-top: -10%;
+          
+
+             align-items: center;
+            /* margin: 1em;*/
+             background-color: #b9ada2d2;
+}
+
+.nosotros-col-img {
+
+             background-image: url(../assets/imagenes/chofer1.jpg);
+             background-position: center;
+             background-repeat: no-repeat;
+             background-size: cover;
+             height: 21.875em; /*350/16=21.875 em*/
+             width: 100%; /*SI TRABAJAS CON FLEXBOX HAY QUE COLOCARLE EL WIDTH 100% A LA IMAGEN SINO NO SE VE*/
+             order: 2;
+}
+
+
+.nosotros-col-text {
+             order: 1;
+}
+
+/*************  RESPONSIVE NOSOTROS  **************/
+
+@media (min-width: 576px) {
+
+     .nosotros-col-img {
+             height: 31.25em;
+        }
+}
+
+
+@media (min-width: 768px) {
+
+     .nosotros {
+            flex-direction: row;
+        }
+     
+     .nosotros-col-img {
+             order: 1;
+             flex: 1 1 0; /*Se usa para que la imagen crezca a medida que la pagia sea mas grande*/       
+     }
+     .nosotros-col-text {
+             order: 2;
+             flex: 1 1 0;
+      } 
+}
+
+
+.nosotros-body {
+
+             padding:1em ;
+             text-align: center;
+             color: black;
+             font-size: 28px;
+}
+
+.nosotros-body h2 {
+
+             text-transform: uppercase;
+             font-weight: 700;
+            
+            
+}
+
+.nosotros-body p {
+
+             font-weight: 500;
+             font-size: 22px;
+             text-align: justify;
+}
+
